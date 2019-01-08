@@ -5,8 +5,10 @@ require 'pony'
 require 'sqlite3'
 
 configure do
-  @db = SQLite3::Database.new 'barbershop.db'
-  @db.execute 'CREATE TABLE IF NOT EXISTS
+  enable :sessions
+  
+  db = get_db
+  db.execute 'CREATE TABLE IF NOT EXISTS
     "Users"
     (
       "id" INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -49,6 +51,18 @@ post '/visit' do
       return erb :visit
     end
 
+    db = get_db
+    db.execute 'insert into 
+      Users 
+      (
+        username, 
+        phone, 
+        datestamp, 
+        barber, 
+        color
+      )
+      values(?,?,?,?,?)', [@user_name, @phone, @date_time, @barber, @color]
+
   @title = "Thank you!"
   @message = "Уважаемый #{@user_name}, мы ждём вас #{@date_time} у выбранного парикмахера #{@barber}. Ваш цвет #{@color}"
 
@@ -58,6 +72,10 @@ post '/visit' do
   f.close
 
   erb :visit
+end
+
+def get_db
+  return SQLite3::Database.new 'barbershop.db'
 end
 
 post '/contacts' do
@@ -97,10 +115,6 @@ post '/contacts' do
 
 
   erb :contacts
-end
-
-configure do
-  enable :sessions
 end
 
 helpers do
