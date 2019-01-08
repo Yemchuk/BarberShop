@@ -10,3 +10,6 @@ User: 123, phone: 789456123, date and time: 123465. Barber: Choose.... Ваш ц
 User: 123, phone: 789456123, date and time: 123465. Barber: Walter White. Ваш цвет #dc2127.
 User: 123, phone: 789456123, date and time: 123465. Barber: Walter White. Ваш цвет #dc2127.
 User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.
+User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.
+User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.
+User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.

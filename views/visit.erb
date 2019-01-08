@@ -4,6 +4,7 @@
 <script>
 $(function() {
 	$('#color').simplecolorpicker();
+	$('#datetimepicker').datetimepicker();
 })
 </script>
 
@@ -18,7 +19,7 @@ $(function() {
 	</div>
 	<div class="form-group">
 	    <label>Дата</label>
-	    <input type="text" class="form-control" placeholder="Дата" name="date_time" value="<%=@date_time%>">
+	    <input id="datetimepicker" type="text" class="form-control" placeholder="Дата" name="date_time" value="<%=@date_time%>">
 	</div>
 	<div class="form-group">
 	    <label>Ваш парикмахер: </label>
