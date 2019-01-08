@@ -5,3 +5,7 @@ User: 1, phone: 2, date and time: 3. Barber: Jessie Pinkman.
 User: 1, phone: 2, date and time: 3. Barber: Walter White.
 User: 1, phone: 2, date and time: 3. Barber: Walter White.
 User: , phone: , date and time: . Barber: Choose....
+User: 123, phone: 789456123, date and time: 123465. Barber: Choose.... Ваш цвет #7bd148.
+User: 123, phone: 789456123, date and time: 123465. Barber: Choose.... Ваш цвет #7bd148.
+User: 123, phone: 789456123, date and time: 123465. Barber: Walter White. Ваш цвет #dc2127.
+User: 123, phone: 789456123, date and time: 123465. Barber: Walter White. Ваш цвет #dc2127.

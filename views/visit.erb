@@ -24,10 +24,9 @@ $(function() {
 	    <label>Ваш парикмахер: </label>
 		<div class="input-group">
 			<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="barber">
-				<option selected>Choose...</option>
-				<option value="Walter White">Walter White</option>
-				<option value="Jessie Pinkman">Jessie Pinkman</option>
-				<option value="Gus Fring">Gus Fring</option>
+				<option <%= @barber == 'Walter White' ? 'selected' : '' %>>Walter White</option>
+				<option <%= @barber == 'Jessie Pinkman' ? 'selected' : '' %>>Jessie Pinkman</option>
+				<option <%= @barber == 'Gus Fring' ? 'selected' : '' %>>Gus Fring</option>
 			</select>
 		</div>
 	</div>
