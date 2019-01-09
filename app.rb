@@ -4,9 +4,13 @@ require 'sinatra/reloader'
 require 'pony'
 require 'sqlite3'
 
+def get_db
+  db = SQLite3::Database.new 'barbershop.db'
+  db.results_as_hash = true
+  db
+end
+
 configure do
-  enable :sessions
-  
   db = get_db
   db.execute 'CREATE TABLE IF NOT EXISTS
     "Users"
@@ -18,6 +22,8 @@ configure do
       "barber" TEXT,
       "color" TEXT
     )'
+
+  enable :sessions
 end
 
 get '/about' do 
@@ -72,10 +78,6 @@ post '/visit' do
   f.close
 
   erb :visit
-end
-
-def get_db
-  return SQLite3::Database.new 'barbershop.db'
 end
 
 post '/contacts' do
@@ -165,3 +167,8 @@ end
 get '/secure/place' do
   erb 'This is a secret place that only <%=session[:identity]%> has access to!'
 end
+
+get '/showusers' do
+  erb "Hello World"
+end
+

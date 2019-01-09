@@ -13,3 +13,5 @@ User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. В�
 User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.
 User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.
 User: Oleh, phone: 123456798, date and time: 123465. Barber: Jessie Pinkman. Ваш цвет #dc2127.
+User: Oleh, phone: 0688312655, date and time: 2019/01/10 19:00. Barber: Walter White. Ваш цвет #ffb878.
+User: Тест, phone: телефон, date and time: 2019/01/14 09:00. Barber: Jessie Pinkman. Ваш цвет #e1e1e1.
