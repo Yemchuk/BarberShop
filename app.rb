@@ -98,16 +98,13 @@ post '/visit' do
       )
       values(?,?,?,?,?)', [@user_name, @phone, @date_time, @barber, @color]
 
-  @title = "Thank you!"
-  @message = "Уважаемый #{@user_name}, мы ждём вас #{@date_time} у выбранного парикмахера #{@barber}. Ваш цвет #{@color}"
+  erb "<h1>Спасибо, Вы записались!</h2>"
 
   # запишем в файл то, что ввёл клиент
   # f = File.open './public/users.txt', 'a'
   # f.write "User: #{@user_name}, phone: #{@phone}, date and time: #{@date_time}. Barber: #{@barber}. Ваш цвет #{@color}.\n"
   # f.close
 
-
-  erb :visit
 end
 
 get '/showusers' do
