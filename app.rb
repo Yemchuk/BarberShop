@@ -73,11 +73,19 @@ post '/visit' do
   @message = "Уважаемый #{@user_name}, мы ждём вас #{@date_time} у выбранного парикмахера #{@barber}. Ваш цвет #{@color}"
 
   # запишем в файл то, что ввёл клиент
-  f = File.open './public/users.txt', 'a'
-  f.write "User: #{@user_name}, phone: #{@phone}, date and time: #{@date_time}. Barber: #{@barber}. Ваш цвет #{@color}.\n"
-  f.close
+  # f = File.open './public/users.txt', 'a'
+  # f.write "User: #{@user_name}, phone: #{@phone}, date and time: #{@date_time}. Barber: #{@barber}. Ваш цвет #{@color}.\n"
+  # f.close
 
   erb :visit
+end
+
+get '/showusers' do
+  db = get_db
+
+  @results = db.execute 'SELECT * FROM Users ORDER BY id ASC'
+
+  erb :showusers
 end
 
 post '/contacts' do
@@ -167,8 +175,3 @@ end
 get '/secure/place' do
   erb 'This is a secret place that only <%=session[:identity]%> has access to!'
 end
-
-get '/showusers' do
-  erb "Hello World"
-end
-
