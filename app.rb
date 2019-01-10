@@ -22,6 +22,11 @@ def get_db
   db
 end
 
+before do
+  db = get_db
+  @barbers = db.execute 'SELECT * FROM Barbers'
+end
+
 configure do
   db = get_db
   db.execute 'CREATE TABLE IF NOT EXISTS
@@ -54,6 +59,8 @@ get '/about' do
 end
 
 get '/visit' do
+
+  
   erb :visit
 end
 
@@ -98,6 +105,7 @@ post '/visit' do
   # f = File.open './public/users.txt', 'a'
   # f.write "User: #{@user_name}, phone: #{@phone}, date and time: #{@date_time}. Barber: #{@barber}. Ваш цвет #{@color}.\n"
   # f.close
+
 
   erb :visit
 end
